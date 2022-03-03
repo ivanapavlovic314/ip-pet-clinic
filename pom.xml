@@ -61,8 +61,12 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <goals>pre-integration-test</goals>
+                    <goals>
+                        <goal>pre-integration-test</goal>
+                        <goal>install</goal>
+                    </goals>
                     <preparationGoals>package</preparationGoals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                     <remoteTagging>false</remoteTagging>
