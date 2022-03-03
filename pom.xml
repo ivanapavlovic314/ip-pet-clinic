@@ -61,9 +61,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <goals>
-                        <goal>pre-integration-test</goal>
-                        <goal>install</goal>
+                    <goals>install
                     </goals>
                     <preparationGoals>package</preparationGoals>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
