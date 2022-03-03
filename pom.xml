@@ -27,7 +27,11 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
-
+    <scm>
+        <developerConnection>scm:git:https://github.com/ivanapavlovic314/ip-pet-clinic.git</developerConnection>
+        <url>https://github.com/ivanapavlovic314/ip-pet-clinic</url>
+        <tag>maven-release-plugin-1.1</tag>
+    </scm>
 
     <build>
         <plugins>
@@ -41,6 +45,19 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <goals>pre-integration-test</goals>
+                    <preparationGoals>package</preparationGoals>
+                    <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <remoteTagging>false</remoteTagging>
                 </configuration>
             </plugin>
         </plugins>
