@@ -2,10 +2,11 @@ package com.springframework.ippetclinic.services.map;
 
 import com.springframework.ippetclinic.model.Vet;
 import com.springframework.ippetclinic.services.CrudService;
+import com.springframework.ippetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();

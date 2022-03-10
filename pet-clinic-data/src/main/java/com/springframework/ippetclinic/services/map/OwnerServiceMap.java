@@ -1,11 +1,11 @@
 package com.springframework.ippetclinic.services.map;
 
 import com.springframework.ippetclinic.model.Owner;
-import com.springframework.ippetclinic.services.CrudService;
+import com.springframework.ippetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -30,4 +30,5 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     public void deleteById(Long id) {
         super.deleteById(id);
     }
+
 }
