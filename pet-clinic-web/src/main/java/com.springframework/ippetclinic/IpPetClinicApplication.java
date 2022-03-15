@@ -9,6 +9,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class IpPetClinicApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(IpPetClinicApplication.class, args);
+        try{
+            SpringApplication.run(IpPetClinicApplication.class, args);
+        }catch (Exception e) {
+            System.out.println("Opet exception" + e.getMessage());
+        }
     }
 }
